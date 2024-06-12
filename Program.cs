@@ -2,3 +2,15 @@
 int j = 0;
 string[] arr = new string[j];
 string[] array = {"1234","1567", "-2","Denmark", "1", "Hello","139","world"};
+
+for (int i = 0; i < array.Length; i++)
+{
+if (array[i].Length <= 3)
+{
+   j++;
+   Array.Resize(ref arr, j);
+   arr[j-1] = array[i];
+}
+}
+Console.WriteLine($"Изначальный массив: [{string.Join(", ", array)}]");
+Console.WriteLine($"Полученный массив: [{string.Join(", ", arr)}]");
